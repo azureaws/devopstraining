@@ -1,0 +1,1006 @@
+
+Devops end goal is improving the efficiency to deliver a high quality end product
+
+
+
+EC2 /respective /azure instances -->
+
+Virtual servers
+
+Virtual machine 
+
+
+Linux cpu /RAM
+
+Application 
+
+Cpu ram mhardidks 
+
+Jave developer 
+
+
+Vendor -->VM ware cpshere 
+A  data center is a physical facility that organizations use to housetheir critical applications and data. A data center's design is based on a networkof computing and storage resources that enable the delivery of sharedapplications and data. The key components of a data center design includerouters, switches, firewalls, storage systems, servers, and application-deliverycontrollers.
+
+
+
+What is a server 
+
+system that provides resources, data, services, or programs to other computers, known as clients, over a network.in which our  application is hosted 
+
+For eg xyz.com application bought 5 servers from one provider
+
+App1 require 4gb ram and 4 processors --Original Size is of 100GB and 100core..
+
+Inefficient usage of the resources/servers 
+
+Thats where virtualization came into place.On the one physical server we will install a hypervisor which is a software that can install virtual machines on your bare metal or  physical server
+We are doing a logical isolation(don't exist physically) that's why we called them VMS
+
+Here we are automating the process using a hypervisor
+
+VMWare Xen -->Hypervisor
+
+We are creating virtual environments which function as virtual computer system which has their own cpu/memory/hardware
+
+
+Hypervisor is the key 
+
+Physical vs virtual 
+
+Hypervisor 
+
+How to create VM
+
+
+
+
+
+Realworld example 
+
+
+Operating system is software which runs in hardware(laptop/Desktop/Server/Physical Machine/Virtual Machine/Linux box/Window Box/Machine) you can
+install applications and run applications (softwares on top of softwares).
+
+Windows: Microsoft OS
+          XP, 7 , 8, 10, 11 ( Grpahical Interface OS) - Desktop OS -> Lot of CPU and memory
+         2010 , 2012 , 2016, 2018 -> Server OS - This doesnt have Graphical interface ( CLI mode - black/white ) SSH tool/CMD command prompt
+
+
+Linux : Redhat - 3,4,5,6,7,8,9(latest) - This also have GI and CLI . Mostly prefered on CLI - reason its very fast in performance.
+        Debian: Ubuntu OS - 14.x, 16.x , 18.x, 20.x, 22.x(latest)
+        Amazon(linux) - AM 1.x , AM2.x
+        Fedora - 5,6,7.x
+        Mint - 5,6,7
+        Kali Linux - 5,6,7
+        Centos - 5,6,7,8,9
+
+Opensource,Distributed,Fast,Secure 
+
+==================================================================================================================================
+1. Datacenter : Datacenter is location/building/room where you have your servers kept in racks, routers,switches,devices,firewalls,AC etc
+Machines or devices will be running 24/7.
+
+2. Physical Server/Machine : It has its own resources like cpu,ram memory, harddisk and which physically located near you.
+
+3. Virtual server/machine : Resources shared from Physical servers/Machines and also if you are accessing machine from different location/region.--logical ilsolatoonm
+
+Venodr/datacneter 
+
+Alwas
+
+4. Cloud Service/Cloud Computing : Web service interface where you can access every service or infrastucture using a dashboard without 
+managing any hardware or software physically from datacenter.
+
+AWS/AZURE/GCP/IBM CLOUD etc
+-> Infrastructure/ development tools/ DB tools/features/DA/DE etc
+
+Cloud service provides who provides us infrastructure or any services, tools etc 
+-> just by opening dashboard/URL .
+-> Charging some about for services you are using.
+-> DC -> High availablity - in some location.
+
+======================
+Cloud provides :
+========================
+Reduction in cost
+No maintainence cost
+no workers
+no electricity
+no building rent
+
+Employees who can manage cloud service.
+Paying for services which he will use
+=========================================================================
+
+=================================================
+Company have own DC:
+=============================================
+-> Own or Rented Building  
+-> Electricity power
+-> Internet connections
+-> Buy devices (servers, routers, firewall,softwares, wires  etc)
+-> Maintainence ( cleaning, electricity, cameras, monthly checks)
+-> Man power ( employers,workers)
+
+==========================================================================================================================
+Basic Installation of Linux on AWS :
+
+Folder -> Directory
+Location -> Path
+Software -> Package
+
+
+AWS DC--> 100s of physical servers -->create virtual machine that we request 
+
+Create VM in AWS/azure
+
+Foe ec2 we have set of developer s which expose the API
+
+AWS EC2 API(exposed) is responsible for receiving the request (if it is in required format/valid follow standards),authnetciated(user has access to was ) and authorized .Now we can write a script to API to create multiple ec2 instances
+
+
+Custom script I wat to create 100 instances ---<>ec2 api 
+
+Script types:
+One is through AWS CLI 
+AWS API(Boto3,Or restapi)
+AWS CFT(Cloud formation templates)
+AWS CDK
+Terraform(multi cloud)
+
+ 
+
+We can directly talk to AWS API
+Tool for infrastructure automation-->in organization 
+
+CDK is very specific to AWS ..propetory tool in AWS
+
+Terraform --hybrid cloud model
+
+User-->App->Windows-->CPU/RAM(DELL)
+
+Software-->(jenkins/java/pytho)--->OS-->Hardware (CPU.RAM,I?O)
+
+Free open source, secure, distributions fast--why linux over windows
+
+
+OS-->Kernel-->System libraries-->Compilers/Userprocesses/System related softwares -->User/APp
+Fundmanetals of linux
+
+Kernel --HEart of OS..Responsible for communication between software(user installs application) and hardware(cpu/ram /IO)
+
+Four imp aspects of Kernel 
+
+Device management 
+Memory management
+Process Management
+System calls
+
+
+Systemlibraries--Basically responsible for performing a task --it goes to system library and then kernel
+Libc is one of the system libraries(GNU)
+
+Compillers--Run java /python application..OS can compile the code using this
+
+
+
+
+
+=========================================================================================
+5. Basic Linux commands:
+=======================================================================================================================
+1 . uname -a  & cat /etc/os-release & cat /etc/redhat-release -> This commands tells about the operating system details
+=============================================================================================================================
+2. cat file_name  -> Display the output of file.
+eg : cat /etc/os-release 
+================================================================================================================================
+Note: Folder in linux is called directory
+software in linux is called package
+location in linux is called path
+===========================================================================================================================================
+3. ls --> list -> listing the files and directory
+
+-l -> long listing
+-r -> Recursive
+-t -> formatting
+-R  -> tree structure ( This will list everything from each folder)
+
+eg :
+devopscloudtrainer2022@cloudshell:~$ ls -lrt
+total 56
+drwxr-xr-x 3 devopscloudtrainer2022 devopscloudtrainer2022 4096 Nov 24 03:22 test
+drwxr-xr-x 2 devopscloudtrainer2022 devopscloudtrainer2022 4096 Nov 24 03:31 test2
+-rw-r--r-x 1 devopscloudtrainer2022 devopscloudtrainer2022  918 Nov 24 03:42 test.txt
+
+file -  1 - hard link
+dir  - 2  - hard link
+
+link - soft /hard
+
+soft -> /home/ram/devops.txt (100GB) ( original)  -> /opt/devops/devops-main.txt( reference/link) - 100 GB waste
+ln -s home/ram/devops.txt new_file
+
+ls -lrt new_file 
+new_file -> /home/ram/devops.txt 
+inodes - different
+
+hard -> /home/ram/devops.txt (100GB) ( original)  -> /opt/devops/devops-main.txt( original) - 100 GB 
+inodes - same
+
+-rw-r--r--    1           devopscloudtrainer2022 devopscloudtrainer2022    0               Nov 25 04:19   fil1
+(permission) (soft/hard link)  (user id/name)               Group id/name       (size of file)  (date   time)  (file_name/directory)           
+
+
+d -->directory
+- --> normal/regular file
+======================================================================================================================================
+4. clear -> clear the screen( not deleting history)
+============================================================================================================
+5. tree -> display the files and directories in tree structure
+==========================================================================================
+6. pwd - present working directory -> this tell in which path/directory you are in
+=============================================================================================
+7. cd -> change directory -> switch from one directory to other directory
+
+cd  --> this take you to home directory
+cd . --> current directory
+cd .. --> move to parent/previous directory
+========================================================================================================================
+8. Directory creation:
+mkdir dir_name
+eg : mkdir devops_class
+-p -> to create recursive directories
+eg : mkdir -p devops_class/devops_class1/devops_class2/
+============================================================================================================================
+9. Delete directory :
+
+rmdir -> remove directory
+eg : rmdir devops_class
+
+rm -rf directory_name
+
+-r -> recursive
+-f -> force
+==============================================================================================================
+10. How to identify the status of command? 
+success - 0
+failure - 1
+
+command : echo $?
+
+devopscloudtrainer2022@cloudshell:~$ echo $?
+0
+devopscloudtrainer2022@cloudshell:~$
+====================================================================================================================
+11. create file,Edit file and save file
+
+touch file_name  -- Empty file
+
+devopscloudtrainer2022@cloudshell:~$ cat > devops_class_notes
+Hello World
+^C
+devopscloudtrainer2022@cloudshell:~$ cat devops_class_notes
+Hello World
+devopscloudtrainer2022@cloudshell:~$
+
+> -> redirection 
+
+=======================================================================================================================
+vi/vim/nano -> editor in linux
+
+vi file_name  --> default in readonly mode
+i -> insert mode -- allows to edit or write on that file
+esc button -> bring to readonly mode
+:wq! 
+w -> save
+q -> quite 
+! - optional
+
+dd --> delete a line
+x --> delete a word
+u  --> undo changes
+
+==============================================================================
+12 . delete file
+
+rm file_name
+
+rm -i file_name -> this will ask for confirmation
+
+-i -> confirmation 
+
+-r -> recursive
+
+-f -> force
+
+devopscloudtrainer2022@cloudshell:~$ rm -i devops_class_notes_new
+rm: remove regular file 'devops_class_notes_new'? y
+devopscloudtrainer2022@cloudshell:~$
+==========================================================================================================
+13 . exit command -> comes out the shell 
+===============================================================================
+
+14. wget : downloading any file from internet/other url.
+===========================================================================================
+15. Copy command : copy will work on both files and directories
+
+cp src-file dest-file 
+
+cp file1 file2
+
+cp -Rf directory directory1
+-R recursive
+-f force
+=========================================================================================
+16. rename or move commands :
+
+mv file1 file2  -> file2 exist it will move all the contents and rename the file.
+
+mv file1 directory/ -> move file into directory
+
+============================================================
+Network, cpu ,ram ,disk,disk usage, processes etc
+==========================================================================================
+1. hostname/IP  - Name of host and IP
+
+[ec2-user@ip-172-31-42-159 ~]$ hostname
+ip-172-31-42-159.us-east-2.compute.internal
+[ec2-user@ip-172-31-42-159 ~]$ hostname -i
+172.31.42.159
+[ec2-user@ip-172-31-42-159 ~]$
+=========================================================================
+2. ethernet cards in system : ifconfig -a
+=========================================================================
+3. ping -> connectivity of host 
+
+ping IP/hostname
+=========================================================================
+4. nslookup - Will give the IP details from hostname
+
+nslookup ip-172-31-42-159.us-east-2.compute.internal
+=========================================================================
+5. lscpu or cat /proc/cpuinfo -> cpu information , how many cpu's are available 
+=========================================================================
+6. free -g/k/m  or cat /proc/meminfo -> Memory information
+
+-g GB
+-k KB
+-m MB
+=========================================================================
+7. Disk free space : df -h 
+
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+[ec2-user@ip-172-31-42-159 ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           381M     0  381M   0% /dev/shm
+tmpfs           153M  4.4M  149M   3% /run
+/dev/xvda4      9.4G  1.2G  8.2G  13% /
+/dev/xvda3      495M  151M  345M  31% /boot
+/dev/xvda2      200M  8.0K  200M   1% /boot/efi
+tmpfs            77M     0   77M   0% /run/user/1000
+[ec2-user@ip-172-31-42-159 ~]$
+=========================================================================
+
+8. Disk usage on file and directories:
+
+du -sh file/directory
+du -sh * -> all file and directories
+
+=========================================================================
+9. Process, cpu,info etc in single command  : top 
+=========================================================================
+10. Restart your system :
+
+-> reboot -> restart your system
+=========================================================================
+11. shutdown -> stop the system
+=========================================================================
+=========================================================================================================
+
+User Management :
+======================================================================================
+
+3 files where user/group details are stored.
+
+/etc/passwd  -> stores all user information
+/etc/shadow -> store all user password
+/etc/group -> store all group information
+
+=========================================================================
+1. User details Management: /etc/passwd : 
+=========================================================================
+root           :x              :0             :0       :root               :/root             :/bin/bash 
+
+ec2-user       :x              :1000         :1000     :Cloud User         :/home/ec2-user      :/bin/bash
+user name     password        user_id      group_id   comment/full_name    home directory        shell
+ID's:  0 -> root user 
+       1-999 -> system user
+       1000 - so one -> normal user
+
+
+useradd John
+passwd John
+userdel John
+usermod details to modify
+=========================================================================
+2. User password management: /etc/shadow : 
+=========================================================================
+passwd john  - create and reset password
+
+smith:$y$j9T$qt3mdLwp.EZ7LN8o/KT.R/$z8YBPMIw8rasMPvRkhFn2Vg487U9G1HmGZouoGGKqd6:19370:0:99999:7:::
+
+[root@ip-172-31-42-159 ~]# chage -l smith
+Last password change                                    : Jan 13, 2023
+Password expires                                        : never
+Password inactive                                       : never
+Account expires                                         : never
+Minimum number of days between password change          : 0
+Maximum number of days between password change          : 99999
+Number of days of warning before password expires       : 7
+[root@ip-172-31-42-159 ~]#
+
+=========================================================================
+3. Group Managment: /etc/group :
+=========================================================================
+groupadd group_name  
+groupdel group_name
+
+
+How to assign a user to a group:
+
+usermod -G group_name user_name
+eg : usermod -G btech john
+===========================================================================================================================
+
+Package Management : 
+===================================================================
+
+Package Mananger : RPM and YUM 
+=========================================================================
+RPM - Redhat package Manager
+YUM  - Yellow dog update modifier
+
+
+jenkins-1.456.SNAPSHOT-1.1.noarch.rpm
+
+rpm-4.18.0-4.mga9.x86_64.rpm
+
+=========================================================================
+1. RPM - Redhat package Manager.
+rpm -ivh package_name.rpm
+=========================================================================
+-i install
+-v verbose(detailed output)
+-h hash(formatting)
+
+rpm -qa  -> list all installed packages
+-q -> query
+-a -> all
+
+rpm -e package  -> remove package
+
+RPM is not resolving any dependencies automatically.
+
+if jenkins, instal java first then install jenkins.
+
+rpm -ivh jenkins-1.456.SNAPSHOT-1.1.noarch.rpm
+--> failed install java ( - dependencies failed)
+-> rpm -ivh java_pkg.rpm
+-> rpm -ivh jenkins-1.456.SNAPSHOT-1.1.noarch.rpm
+
+=========================================================================
+2. YUM :Yellow dog update modifier
+=========================================================================
+yum install package_name( no extension/not required)
+yum remove package_name
+yum upgrade package_name
+
+
+cd /etc/yum.repos.d
+ls -lrt  -> all .repo files -> location where all the packages are stored.
+
+cat redhat-rhui.repo
+
+[rhel-9-appstream-rhui-debug-rpms]
+name=Red Hat Enterprise Linux 9 for $basearch - AppStream from RHUI (Debug RPMs)
+mirrorlist=https://rhui.REGION.aws.ce.redhat.com/pulp/mirror/content/dist/rhel9/rhui/$releasever/$basearch/appstream/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel9.key
+sslclientcert=/etc/pki/rhui/product/content-rhel9.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+====================================
+vi jenkins.repo
+=========================================================================
+[jenkins]
+name=jenkins repo
+baseurl/mirrorlist=URL/location of packages/
+enabled=1 -> repo enabled or disabled
+gpgcheck=0
+
+
+yum repolist -> dispaly all the repos
+==================================================================================================================
+Add repo in /etc/yum.repos.d
+============================================================================================
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-rc/jenkins.repo
+ rpm --import http://pkg.jenkins-ci.org/redhat-rc/jenkins-ci.org.key
+
+yum install jenkins -y
+yum clean all -> clear cache
+
+ubuntu -> apt-get install java
+redhat/amazon -> yum install java
+===============================================================================================================
+
+Backup and restore :
+=====================================================================================
+
+Linux - Linux OS backups,  softwares packages, directories,files etc
+MOstly to bundle the files/directories and take backup.
+Also to ship/transfer that zip/tar file to some other 100 servers.
+Space is optimized.
+
+Eg: linux-folder -> 10GB  -> Ship to 100 Servers -> 1 Hr
+    linux-folder.tar -> 6GB  -> Ship to 100 Servers -> 40 Hr
+=========================================================================
+
+Backup using tar and zip :
+=========================================================================
+Component/service logs(3rd party) -> /var/log/tomcat.log /opt/sonar/sonarqube.log
+system logs -> Os related files, login and logout -> mail.log, syslog -> /var/log
+
+=============================================================================================
+Types of backups: 
+=============================================================================================
+1. Tar - Tape archieve
+2. zip - backup utility
+3. dd - device drivers - Huge backups OS backup, filesystems (C drive/D Drive)
+
+=============================================================================================
+1. Tar - Tape Archieve - This is backup utility used for bundling the files into single file withing 10G size range.
+=============================================================================================
+
+File1 File2 File3 -> File.tar
+
+command : tar -cvf file.tar file1 file2 file3
+          tar -cvf file.tar *
+          tar -cvf file.tar file*
+
+-c - create
+-v - verbose(display detailed output)
+-f - force
+-x - extract
+-t - display tar files- without extracting the bundle
+-z - compress (.gz) - reduce the size of that bundle
+
+
+Extract : tar -xvf file.tar .
+display : tar -tvf file.tar
+
+Compressed tar file creation : tar -cvzf file.tar.gz file1 file2 file3
+eg : already tar available, now apply compressing:
+tar -czvf file.tar.gz file.tar
+
+=============================================================================================
+2. Zip : This is backup utility used for bundling the files into single file withing 10G size range.
+=============================================================================================
+Create an Zip:
+
+zip -r file.zip file/directory/*
+-r recursive 
+eg : zip -r java.zip java1 java2 java3
+     zip -r java.zip *
+     zip -r java.zip java* file*
+
+
+unzip/extract: unzip file.zip
+
+=======================================================================================================
+3 . dd - device drives - used for taking backups of hard disk and linux boot/OS images
+
+dd if=/dev/sba of=/dev/sbb
+dd if=/dev/xvda4 of=/dev/xvda4
+
+if -> input file
+of -> output
+
+How to identify how many disk are attached in system?
+
+command : lsblk -> displays Block list
+
+[root@ip-172-31-44-13 log]# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+xvda    202:0    0   10G  0 disk
+├─xvda1 202:1    0    1M  0 part
+├─xvda2 202:2    0  200M  0 part /boot/efi
+├─xvda3 202:3    0  500M  0 part /boot
+└─xvda4 202:4    0  9.3G  0 part /
+[root@ip-172-31-44-13 log]#
+
+=====================================================================================================
+Permissions: Permission are provided to files/directories for accessing - reading/writing/deleting/append etc
+
+=========================================================================
+3 Level of Permissions:
+=========================================================================
+owner level
+group level
+others level
+
+Default file and directory permission :
+
+-rw-r--r--. 1 root root 12984 Jan 14 01:09 file1   - 644
+drwxr-xr-x. 2 root root     6 Jan 14 01:20 test    - 755
+
+- -> regular file
+d -> directory file
+
+r - read
+w - write/delete/append/update
+x - execute
+
+rwx           r-x    r-x
+
+owner/users  group   others
+
+octet numbers:
+
+r - 4
+w - 2
+x - 1
+
+rwx     r-x    r-x
+421     4-1    4-1
+7        5      5 
+
+
+command : chmod -> change modification
+eg : chmod 444 test.txt
+     chmod 777 directory
+     chmod u=rwx, g=r-x, o=r-- file/directory
+     chmod -R 755  directory(files and directories)
+
+-R recursive
+==============================================================================
+Change file and directory ownership :
+=========================================================================
+-rw-r--r--. 1 root root 12984 Jan 14 01:09 file1  
+drwxr-xr-x. 2 root root     6 Jan 14 01:20 test 
+
+
+command : chown -> change ownership
+syntax : chown -R username:groupname file/directory
+eg:  chown -R John:John file/directory
+===============================================================================================================
+File systems :  File system
+
+=============================================================================
+
+eg : In windows , before c:drive, D:drive 
+-> RAW laptop -> software OS windows 7 -> harddisk (500)-> convert disk into partitions -> c:drive, D:drive -> Formatting -> read and write
+
+Linux - File systems 
+RAW laptop -> software OS Linux 7 -> harddisk (500)-> convert disk into partitions -> File systems -> Formatting -> allows to read and write.
+
+
+/  -- root filesytem
+/bin -> binaries (executable files)
+/opt - store all installed softwares
+/dev - devices are stored here -> new disk added will shown here ( /dev/sba, /dev/xvda)
+/mnt - temporary data
+/usr - unix resources -> eg : /usr/bin /usr/lib ->  eg java -> /usr/lib/java
+/tmp - temporary  used by OS for any processing acitivity
+/proc - process files, cpu info, memory info , swap info etc
+/var -  log information eg : mail.log, syslog, messages, audit files etc
+/lib - libraries  - jar files, zip etc
+/etc - configuration files 
+/home - users home directory
+/boot - kernal info, OS boot files 
+/media - songs, videos etc
+
+=================================================================================
+Delegate root privileges : 
+==================================================================================
+
+root  - Super/admin user which have all privileges to perform any activity.
+
+
+Normal user -> requires some privileges as  root.
+
+Eg : root -> install all software
+    normal -> install all software -> some permission is required.
+
+sudo -> /etc/sudeors -> file can edited using visudo
+visudo
+root ALL=(ALL) ALL
+john ALL=(ALL) ALL
+
+
+How john user will run commands using sudo privileges?
+sudo yum install wget -y
+
+am in root user : root@hostname: su - user_name
+                   passwd :
+                  John@hostname: 
+
+su - username ->  switch a normal user 
+sudo su - john  -> switch to John user with sudo command
+sudo su   ->  switch to root user with sudo command
+======================================================================
+SSH & SCP :
+=========================================================================
+SCP and SSH tools are secured tools to login and transfer files from local to remote or remote local.
+
+SSH  -> secure shell
+SCP -> secure copy
+
+
+why ssh? 
+
+eg : login into server
+
+ssh user@IP-Address -> enter password -> Network layer -> Encrypetd format -> verify at DC database server -> allow you login.
+AWS -> ssh -i devops.pem user@IP-Address 
+
+Package : openssh -> by default package is installed in redhat 7,8,9
+default port ssh : 22
+
+========================================================================
+Steps for allowing ssh into machine :
+================================================================
+1. Create an user and password
+
+useradd devops
+passwd devops
+
+2. configuration file:
+
+vi /etc/ssh/sshd_config
+
+Enable ssh -> PasswordAuthenication yes
+              PermitRootLogin yes
+
+3 . restart ssh service :
+
+systemctl restart/start/stop/status sshd -> to reflect the changes in OS
+
+4. exit from root :
+su - devops
+passwd : enter password 
+
+5. ssh devops@PRIVATE-IP 
+
+
+6. secure copy files:
+
+syntax: 
+scp -rf file_name user@IP:/locatiom
+
+eg : scp -rp file1 devops@172.31.33.34
+
+options: 
+-r resursive  
+-f force
+
+[devops@ip-172-31-46-176 ~]$ scp -r file1 devops@172.31.42.87:/home/devops/
+The authenticity of host '172.31.42.87 (172.31.42.87)' can't be established.
+ED25519 key fingerprint is SHA256:G6uxDzAG94XyfmyaDIxg7gF/F2qNWW/IlwOgtJwrXlk.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '172.31.42.87' (ED25519) to the list of known hosts.
+devops@172.31.42.87's password:
+file1                                                                                      100%    0     0.0KB/s   00:00
+[devops@ip-172-31-46-176 ~]$ 
+==============================================================================================================================================
+Passwordless connection between 2 machines :
+=======================================================================================================================================
+1. Create 2 servers in AWS and open port 22.
+
+2. Login into servers and switch to root users.
+sudo su - root
+
+3. Create an user and password
+
+useradd devops
+passwd devops
+
+4. configuration file:
+
+vi /etc/ssh/sshd_config
+
+Enable ssh -> PasswordAuthenication yes
+              PermitRootLogin yes
+
+5. restart ssh service :
+
+systemctl restart/start/stop/status sshd -> to reflect the changes in OS
+
+6. exit from root :
+su - devops
+passwd : enter password 
+
+
+7. Generate a ssh key on both machines
+ssh-keygen -t rsa 
+
+8. Verify the private and public keys in /home/root/.ssh/
+
+
+9. Copy keys in another machines for password connection
+ssh-copy-id user@IP-ADDRESS
+
+10. Now try to login into server without password
+ssh user@IP
+
+=======================================================================================================================================
+Automation of Jobs: 
+==============================================================================
+1. At Job -> At time -> At job runs once at that time.
+eg : run a test.sh on 10.00 AM -> This is run at 10.00 AM once, after it will never run.
+
+Package : at/atd
+yum install at -y
+systemctl enable atd.service
+systemctl start atd.service
+systemctl status atd.service
+
+How to schedule a JOb :
+
+at 10.00 AM
+> interactive mode -> type your command , mentioned your script
+ctrl + d -> save and exit
+
+at 10.00 AM sun
+
+> cd /opt && ls -lrt >> test.txt
+
+ctrl + d -> save and exit
+
+
+how to check the jobs schedule :
+
+at -c Job_id
+
+atq 
+
+
+How to delete at job:
+
+atrm job_id
+
+==================================================================================================
+2. Cron Job/crontab : This is for repeative job at specific time.
+==================================================================================================
+
+eg : every 10.00 AM trigger an email.
+eg : every sunday 11 PM , run an script and take backup.
+eg : Every day midnight trigger script
+
+crontab have a format :
+
+command : * * * * * command
+*  -- Minutes (0-59)
+*  -- Hours 0-23)
+*  -- day of month (1-31)
+*  -- month (1-12)
+*  -- day of the week (0-7) 0 -> sunday
+
+Package :crontab
+
+yum install crontab -y
+systemctl enable crontab.service
+systemctl start crontab.service
+systemctl status crontab.service
+
+crontab -l  -> list the cron job
+
+crontab -e -> editing the job
+
+crontab -r -> delete the job
+
+
+eg: */2 * * * * cd /opt/ && touch f10
+
+eg: */5* * 12 * cd /opt/ && touch f10
+
+
+How to check logs of crontab :
+
+journalctl /usr/sbin/crond | tail -n 1000
+=================================================================================================================================
+==================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+         
